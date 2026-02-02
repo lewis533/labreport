@@ -1,22 +1,15 @@
-# Lab 1 - Ohm's Law Calculator
+print("--- MY OHMS LAW APP ---")
 
+v_input = float(input("Enter the voltage (V): "))
+r_input = float(input("Enter the resistance (R): "))
 
-print("--- Ohm's Law Calculator ---")
-
-
-volts = float(input("Enter the voltage: "))
-ohms = float(input("Enter the resistance: "))
-
-
-if ohms == 0:
-    print("Wait, resistance can't be zero. Try again.")
+if r_input == 0:
+    print("Error: Resistance cannot be zero.")
 else:
+    current = v_input / r_input
+    power_val = v_input * current
     
-    amps = volts / ohms
-    
-    watts = volts * amps
-    
-    print("Current is:", amps, "A")
-    print("Power is:", watts, "W")
+    print("Current is:", current, "A")
+    print("Power is:", power_val, "W")
 
-print("Done.")
+print("Calculation Finished.")
